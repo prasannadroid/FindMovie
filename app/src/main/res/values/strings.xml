@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">FindMovie</string>
+    <string name="enter_a_movie_name_to_look_up_on_OMDB">Enter a movie name to look up on OMDb</string>
+    <string name="show_details">Show Details</string>
+    <string name="movie_details">Movie Details</string>
+    <string name="nothing_yet">Nothing yet</string>
+    <string name="enter_movie_name">Enter Movie Name</string>
+    <string name="error_invalid_input">Invalid Input</string>
+
 </resources>
