@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        releaseConfig {
+            keyAlias 'key0'
+            keyPassword 'abcd1234'
+            storeFile file('../FindMovieSigning.jks')
+            storePassword 'abcd1234'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.test.findmovie"
@@ -12,6 +20,12 @@ android {
     }
     buildTypes {
         release {
+            signingConfig signingConfigs.releaseConfig
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.releaseConfig
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
